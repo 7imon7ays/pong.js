@@ -1,0 +1,19 @@
+#content {
+  position: relative;
+}
+
+.score {
+  font-family: 'Courier New';
+  font-weight: bold;
+  color: #0ff800;
+  position: absolute;  
+  left: 1%;
+}
+
+.human {
+  top: 95%;
+}
+
+.computer {
+  top: 2%;
+}
