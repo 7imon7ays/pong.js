@@ -1,5 +1,12 @@
 function Player () {
   this.paddle = new Paddle(175, 580, 50, 10);
+
+  window.addEventListener("keydown", function (event) {
+    if (event.which === 32) {
+      event.preventDefault();
+      this.shoot();
+    }
+  }.bind(this));
 }
 
 Player.prototype.render = function () {
@@ -20,6 +27,10 @@ Player.prototype.update = function () {
       this.paddle.move(0, 0);
     }
   }
+};
+
+Player.prototype.shoot = function () {
+  this.paddle.shoot("up", "human");
 };
 
 var keysDown = {};

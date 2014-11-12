@@ -11,7 +11,7 @@ Ball.prototype.render = function () {
   context.arc(this.x, this.y, this.radius, 2 * Math.PI, false);
   context.fillStyle = "#ffffff"
   context.fill();
-}
+};
 
 Ball.prototype.update = function(paddle1, paddle2) {
   this.x += this.x_speed;

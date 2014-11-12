@@ -1,4 +1,7 @@
-var animate = function(callback) { window.setTimeout(callback, 1000/60) };
+var animate = function(callback) {
+  window.setTimeout(callback, 1000/60);
+};
+
 var canvas = document.createElement('canvas');
 var width = 400;
 var height = 600;
@@ -27,6 +30,7 @@ var update = function () {
   computer.update(ball);
   ball.update(player.paddle, computer.paddle);
   score.update();
+  Rocket.instances.human && Rocket.instances.human.update();
 };
 
 var render = function () {
@@ -35,6 +39,7 @@ var render = function () {
   player.render();
   computer.render();
   ball.render();
+  Rocket.instances.human && Rocket.instances.human.render();
 };
 
 
